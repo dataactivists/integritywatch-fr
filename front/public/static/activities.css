@@ -1192,7 +1192,7 @@ table.dataTable tbody tr:hover {
 }
 .tabB-clients-table ul {
   padding-left: 15px;
-}.overlay[data-v-a2f5b2] {
+}.overlay[data-v-abf00d] {
   background-color: rgba(255, 255, 255, 0.9);
   z-index: 10001;
   top: 0;
@@ -1202,7 +1202,7 @@ table.dataTable tbody tr:hover {
   position: fixed;
   margin: 0;
 }
-.overlay .loader-container[data-v-a2f5b2] {
+.overlay .loader-container[data-v-abf00d] {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -1210,7 +1210,7 @@ table.dataTable tbody tr:hover {
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
-.overlay .loader-container .loader[data-v-a2f5b2] {
+.overlay .loader-container .loader[data-v-abf00d] {
   border: 13px solid #f3f3f3;
   /* Light grey */
   border-top: 13px solid #138496;
@@ -1219,55 +1219,55 @@ table.dataTable tbody tr:hover {
   width: 120px;
   height: 120px;
   margin: 30px auto;
-  animation: spin-data-v-a2f5b2 2s linear infinite;
+  animation: spin-data-v-abf00d 2s linear infinite;
 }
-.overlay .loader-container .loader-text[data-v-a2f5b2] {
+.overlay .loader-container .loader-text[data-v-abf00d] {
   font-size: 20px;
   font-weight: 600;
 }
-.overlay .loader-container .loader-text.below[data-v-a2f5b2] {
+.overlay .loader-container .loader-text.below[data-v-abf00d] {
   color: #138496;
   font-weight: 600;
 }
-@keyframes spin-data-v-a2f5b2 {
+@keyframes spin-data-v-abf00d {
 0% {
     transform: rotate(0deg);
 }
 100% {
     transform: rotate(360deg);
 }
-}.chart-header[data-v-8e8799] {
+}.chart-header[data-v-22b611] {
   padding: 10px 5px;
   margin: 0;
   background: #fafafa;
 }
-.chart-header .chart-title[data-v-8e8799] {
+.chart-header .chart-title[data-v-22b611] {
   font-size: 20px;
   text-align: left;
   color: #205d85;
 }
-.chart-header .chart-title.smaller[data-v-8e8799] {
+.chart-header .chart-title.smaller[data-v-22b611] {
   font-size: 17px;
 }
 @media only screen and (max-width: 1400px) {
-.chart-header .chart-title[data-v-8e8799] {
+.chart-header .chart-title[data-v-22b611] {
     font-size: 18px;
 }
 }
 @media only screen and (max-width: 1250px) {
-.chart-header .chart-title[data-v-8e8799] {
+.chart-header .chart-title[data-v-22b611] {
     font-size: 16px;
 }
 }
 @media only screen and (max-width: 767px) {
-.chart-header .chart-title[data-v-8e8799] {
+.chart-header .chart-title[data-v-22b611] {
     font-size: 20px;
 }
 }
-.chart-header .chart-header-buttons[data-v-8e8799] {
+.chart-header .chart-header-buttons[data-v-22b611] {
   text-align: right;
 }
-.chart-header .chart-header-buttons .btn-info[data-v-8e8799] {
+.chart-header .chart-header-buttons .btn-info[data-v-22b611] {
   padding: 0px 10px;
   border-radius: 2px;
   font-weight: 600;
