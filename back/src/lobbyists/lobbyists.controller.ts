@@ -1,7 +1,7 @@
 import { Controller, Get, Post, Put } from '@nestjs/common';
 import { AppService } from './lobbyists.service';
 
-@Controller()
+@Controller("lobbyists")
 export class LobbyistController {
   constructor(private readonly appService: AppService) {}
 
