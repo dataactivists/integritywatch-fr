@@ -1,7 +1,8 @@
 import { Inject, Injectable } from '@nestjs/common';
 import { Repository } from 'typeorm';
 import { Lobbyist } from './lobyists.entity';
-import { CreateLobbyistDTO } from './lobbyists.dto';
+import { CreateLobbyistDTO, EditLobbyistDTO } from './lobbyists.dto';
+import { ApplyDtoToModel } from 'src/helpers';
 
 @Injectable()
 export class LobbysistsService {
@@ -23,6 +24,17 @@ export class LobbysistsService {
 		return await this.repo.save(lob)
 	}
 	
+	public async editLobbyist(id: number, dto: EditLobbyistDTO) {
+		let lob = await this.repo.findOneBy({
+			id: id
+		})
+		if (lob == null) {
+			return null
+		}
+		ApplyDtoToModel(dto, lob)
+		return await this.repo.save(lob)
+	}
+
 	public async deleteLobbyistById(id: number) {
 		return await this.repo.delete({
 			id: id

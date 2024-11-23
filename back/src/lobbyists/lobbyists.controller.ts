@@ -1,6 +1,6 @@
 import { Body, Controller, Get, Param, Post, Put } from '@nestjs/common';
 import { LobbysistsService } from './lobbyists.service';
-import { CreateLobbyistDTO } from './lobbyists.dto';
+import { CreateLobbyistDTO, EditLobbyistDTO } from './lobbyists.dto';
 
 @Controller("lobbyists")
 export class LobbyistController {
@@ -22,8 +22,8 @@ export class LobbyistController {
 	}
 	
 	@Put(":id")
-	public async putLobbyist(@Param("id") id: number) {
-
+	public async putLobbyist(@Param("id") id: number, @Body() dto: EditLobbyistDTO) {
+		return await this.lobbyistsService.editLobbyist(id, dto)
 	}
 	
 	@Get(":id")
