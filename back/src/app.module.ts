@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { DatabaseModule } from './database.module/database.module';
+import { DatabaseModule } from './database/database.module';
 import { LobbysistsService } from './lobbyists/lobbyists.service';
 import { LobbyistController } from './lobbyists/lobbyists.controller';
 import { ActivitiesRepository } from './activities/activities.repository';
