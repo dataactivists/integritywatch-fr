@@ -1,6 +1,6 @@
 import { Entity, Column, PrimaryGeneratedColumn, ManyToOne, JoinColumn, OneToMany } from 'typeorm';
 import { Lobbyist } from './lobbyists.entity';
-import { Email } from './emails.entity';
+import { Email } from '../database/entities/emails.entity';
 
 export enum ActivityType {
 	TEST = "TEST"

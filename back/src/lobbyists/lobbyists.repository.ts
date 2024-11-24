@@ -1,6 +1,6 @@
 import { Provider } from "@nestjs/common";
-import { Lobbyist } from "src/database/entities/lobbyists.entity";
 import { DataSource } from "typeorm";
+import { Lobbyist } from "./lobbyists.entity";
 
 export const LobbyistsRepository: Provider = {
 	provide: "LobbyistsRepository",

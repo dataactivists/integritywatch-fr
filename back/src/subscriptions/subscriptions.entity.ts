@@ -1,6 +1,6 @@
 import { Entity, Column, PrimaryGeneratedColumn, ManyToOne, JoinColumn } from 'typeorm';
 import { Lobbyist } from './lobbyists.entity';
-import { User } from './users.entity';
+import { User } from '../users/users.entity';
 
 @Entity()
 export class Subscription	 {
