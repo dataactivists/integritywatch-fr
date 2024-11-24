@@ -1,4 +1,4 @@
-import { Body, Controller, Get, Param, Post, Put } from '@nestjs/common';
+import { Body, Controller, Delete, Get, Param, Post, Put } from '@nestjs/common';
 import { LobbysistsService } from './lobbyists.service';
 import { CreateLobbyistDTO, EditLobbyistDTO } from './lobbyists.dto';
 
@@ -26,7 +26,7 @@ export class LobbyistController {
 		return await this.lobbyistsService.editLobbyist(id, dto)
 	}
 	
-	@Get(":id")
+	@Delete(":id")
 	public async deleteLobbyist(@Param("id") id: number) {
 		return await this.lobbyistsService.deleteLobbyistById(id)
 	}
