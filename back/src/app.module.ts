@@ -4,10 +4,15 @@ import { AppService } from './app.service';
 import { DatabaseModule } from './database/database.module';
 import { LobbysistsService } from './lobbyists/lobbyists.service';
 import { LobbyistController } from './lobbyists/lobbyists.controller';
+import { ActivitiesRepository } from './activities/activities.repository';
+import { EmailsRepository } from './emails/emails.repository';
+import { LobbyistsRepository } from './lobbyists/lobbyists.repository';
+import { SubscriptionsRepository } from './subscriptions/subscriptions.repository';
+import { UsersRepository } from './users/users.repository';
 
 @Module({
 	imports: [DatabaseModule],
 	controllers: [AppController, LobbyistController],
-	providers: [AppService, LobbysistsService],
+	providers: [AppService, LobbysistsService, ActivitiesRepository, EmailsRepository,LobbyistsRepository, SubscriptionsRepository, UsersRepository],
 })
 export class AppModule {}

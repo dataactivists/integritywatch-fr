@@ -1,8 +1,8 @@
 import { Inject, Injectable } from '@nestjs/common';
 import { Repository } from 'typeorm';
-import { Lobbyist } from '../database/entities/lobbyists.entity';
 import { CreateLobbyistDTO, EditLobbyistDTO } from './lobbyists.dto';
 import { ApplyDtoToModel } from 'src/helpers';
+import { Lobbyist } from './lobbyists.entity';
 
 @Injectable()
 export class LobbysistsService {

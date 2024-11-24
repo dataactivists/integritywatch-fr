@@ -1,6 +1,6 @@
 import { Provider } from "@nestjs/common";
+import { Subscription } from "rxjs";
 import { DataSource } from "typeorm";
-import { Subscription } from "../entities/subscriptions.entity";
 
 export const SubscriptionsRepository: Provider = {
 	provide: "SubscriptionsRepository",

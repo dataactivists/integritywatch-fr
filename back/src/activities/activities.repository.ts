@@ -1,6 +1,6 @@
 import { Provider } from "@nestjs/common";
 import { DataSource } from "typeorm";
-import { Activity } from "../entities/activities.entity";
+import { Activity } from "./activities.entity";
 
 export const ActivitiesRepository: Provider = {
 	provide: "ActivitiesRepository",
