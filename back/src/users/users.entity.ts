@@ -1,7 +1,6 @@
 import { Entity, Column, PrimaryGeneratedColumn, ManyToOne, JoinColumn, OneToMany } from 'typeorm';
-import { Lobbyist } from './lobbyists.entity';
 import { Subscription } from '../subscriptions/subscriptions.entity';
-import { Email } from './emails.entity';
+import { Email } from 'src/emails/emails.entity';
 
 @Entity()
 export class User	 {
@@ -13,7 +12,7 @@ export class User	 {
 	})
 	email: string
 
-	@Column("timestamptz")
+	@Column("datetime")
 	created_at: Date
 
 	@OneToMany(() => Subscription, (subscription) => subscription.user)
