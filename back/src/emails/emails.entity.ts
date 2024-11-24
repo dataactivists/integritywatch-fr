@@ -1,13 +1,13 @@
+import { Activity } from 'src/activities/activities.entity';
+import { User } from 'src/users/users.entity';
 import { Entity, Column, PrimaryGeneratedColumn, ManyToOne, JoinColumn, OneToMany } from 'typeorm';
-import { User } from './users.entity';
-import { Activity } from '../../activities/activities.entity';
 
 @Entity()
 export class Email {
 	@PrimaryGeneratedColumn("increment")
 	useemail_id: number
 
-	@Column("timestamptz")
+	@Column("datetime")
 	sent_at: Date
 
 	@ManyToOne(() => User, (user) => user.subscriptions)

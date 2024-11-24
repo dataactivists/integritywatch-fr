@@ -1,6 +1,6 @@
 import { Entity, Column, PrimaryGeneratedColumn, ManyToOne, JoinColumn } from 'typeorm';
-import { Lobbyist } from './lobbyists.entity';
 import { User } from '../users/users.entity';
+import { Lobbyist } from 'src/lobbyists/lobbyists.entity';
 
 @Entity()
 export class Subscription	 {
@@ -15,7 +15,7 @@ export class Subscription	 {
 	@JoinColumn({ name: "user_id", referencedColumnName: "user_id"})
     user: User
 
-	@Column("timestamptz", {
+	@Column("datetime", {
 		default: () => "CURRENT_TIMESTAMP"
 	})
 	created_at: Date

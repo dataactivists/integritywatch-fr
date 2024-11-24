@@ -1,6 +1,6 @@
+import { Email } from 'src/emails/emails.entity';
+import { Lobbyist } from 'src/lobbyists/lobbyists.entity';
 import { Entity, Column, PrimaryGeneratedColumn, ManyToOne, JoinColumn, OneToMany } from 'typeorm';
-import { Lobbyist } from './lobbyists.entity';
-import { Email } from '../database/entities/emails.entity';
 
 export enum ActivityType {
 	TEST = "TEST"
@@ -24,7 +24,7 @@ export class Activity {
 	@Column("text")
 	description: string
 
-	@Column("timestamptz")
+	@Column("datetime")
 	created_at: Date
 
 	@OneToMany(() => Email, (email) => email.activity)
