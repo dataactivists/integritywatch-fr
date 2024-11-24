@@ -10,12 +10,21 @@ import { LobbyistsRepository } from './lobbyists/lobbyists.repository';
 import { SubscriptionsRepository } from './subscriptions/subscriptions.repository';
 import { UsersRepository } from './users/users.repository';
 import { ConfigModule } from '@nestjs/config';
+import { UsersService } from './users/users.service';
+import { UsersController } from './users/users.controller';
 
 @Module({
 	imports: [DatabaseModule, ConfigModule.forRoot({
 		isGlobal: true
 	})],
-	controllers: [AppController, LobbyistController],
-	providers: [AppService, LobbysistsService, ActivitiesRepository, EmailsRepository,LobbyistsRepository, SubscriptionsRepository, UsersRepository],
+	controllers: [
+		AppController, 
+		LobbyistController, UsersController
+	],
+	providers: [
+		AppService, 
+		LobbysistsService, UsersService,
+		ActivitiesRepository, EmailsRepository,LobbyistsRepository, SubscriptionsRepository, UsersRepository
+	],
 })
 export class AppModule {}
