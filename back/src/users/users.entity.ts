@@ -1,6 +1,6 @@
 import { Entity, Column, PrimaryGeneratedColumn, ManyToOne, JoinColumn, OneToMany } from 'typeorm';
 import { Lobbyist } from './lobbyists.entity';
-import { Subscription } from './subscriptions.entity';
+import { Subscription } from '../subscriptions/subscriptions.entity';
 import { Email } from './emails.entity';
 
 @Entity()

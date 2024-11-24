@@ -1,6 +1,6 @@
 import { Entity, Column, PrimaryGeneratedColumn, ManyToOne, JoinColumn, OneToMany } from 'typeorm';
 import { User } from './users.entity';
-import { Activity } from './activities.entity';
+import { Activity } from '../../activities/activities.entity';
 
 @Entity()
 export class Email {

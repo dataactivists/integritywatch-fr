@@ -1,6 +1,6 @@
+import { Activity } from 'src/activities/activities.entity';
+import { Subscription } from 'src/subscriptions/subscriptions.entity';
 import { Entity, Column, PrimaryGeneratedColumn, OneToMany } from 'typeorm';
-import { Activity } from './activities.entity';
-import { Subscription } from './subscriptions.entity';
 
 @Entity()
 export class Lobbyist {
