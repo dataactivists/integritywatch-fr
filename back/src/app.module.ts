@@ -14,17 +14,22 @@ import { UsersService } from './users/users.service';
 import { UsersController } from './users/users.controller';
 
 @Module({
-	imports: [DatabaseModule, ConfigModule.forRoot({
-		isGlobal: true
-	})],
-	controllers: [
-		AppController, 
-		LobbyistController, UsersController
-	],
-	providers: [
-		AppService, 
-		LobbyistsService, UsersService,
-		ActivitiesRepository, EmailsRepository,LobbyistsRepository, SubscriptionsRepository, UsersRepository
-	],
+  imports: [
+    DatabaseModule,
+    ConfigModule.forRoot({
+      isGlobal: true,
+    }),
+  ],
+  controllers: [AppController, LobbyistController, UsersController],
+  providers: [
+    AppService,
+    LobbyistsService,
+    UsersService,
+    ActivitiesRepository,
+    EmailsRepository,
+    LobbyistsRepository,
+    SubscriptionsRepository,
+    UsersRepository,
+  ],
 })
 export class AppModule {}

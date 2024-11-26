@@ -1,23 +1,30 @@
-import { Entity, Column, PrimaryGeneratedColumn, ManyToOne, JoinColumn, OneToMany } from 'typeorm';
+import {
+  Entity,
+  Column,
+  PrimaryGeneratedColumn,
+  ManyToOne,
+  JoinColumn,
+  OneToMany,
+} from 'typeorm';
 import { Subscription } from '../subscriptions/subscriptions.entity';
 import { Email } from 'src/emails/emails.entity';
 
 @Entity()
-export class User	 {
-	@PrimaryGeneratedColumn("increment")
-	user_id: number;
+export class User {
+  @PrimaryGeneratedColumn('increment')
+  user_id: number;
 
-	@Column("varchar", {
-		length: 255
-	})
-	email: string
+  @Column('varchar', {
+    length: 255,
+  })
+  email: string;
 
-	@Column("datetime")
-	created_at: Date
+  @Column('datetime')
+  created_at: Date;
 
-	@OneToMany(() => Subscription, (subscription) => subscription.user)
-	subscriptions: Subscription[]
+  @OneToMany(() => Subscription, (subscription) => subscription.user)
+  subscriptions: Subscription[];
 
-	@OneToMany(() => Email, (email) => email.user)
-	emails: Subscription[]
+  @OneToMany(() => Email, (email) => email.user)
+  emails: Subscription[];
 }

@@ -1,7 +1,7 @@
 export class CreateLobbyistDTO {
-    readonly name: string
-} 
+  readonly name: string;
+}
 
 export class EditLobbyistDTO {
-    readonly name: string
+  readonly name: string;
 }
