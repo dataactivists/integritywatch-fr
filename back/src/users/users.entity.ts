@@ -1,11 +1,4 @@
-import {
-  Entity,
-  Column,
-  PrimaryGeneratedColumn,
-  ManyToOne,
-  JoinColumn,
-  OneToMany,
-} from 'typeorm';
+import { Entity, Column, PrimaryGeneratedColumn, OneToMany } from 'typeorm';
 import { Subscription } from '../subscriptions/subscriptions.entity';
 import { Email } from 'src/emails/emails.entity';
 
