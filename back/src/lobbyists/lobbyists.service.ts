@@ -5,7 +5,7 @@ import { ApplyDtoToModel } from 'src/helpers';
 import { Lobbyist } from './lobbyists.entity';
 
 @Injectable()
-export class LobbysistsService {
+export class LobbyistsService {
 	constructor(@Inject("LobbyistsRepository") private readonly repo: Repository<Lobbyist>) {}
 	
 	public async getLobbyists() {

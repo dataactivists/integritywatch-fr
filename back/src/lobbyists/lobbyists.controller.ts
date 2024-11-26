@@ -1,10 +1,10 @@
 import { Body, Controller, Delete, Get, Param, Post, Put } from '@nestjs/common';
-import { LobbysistsService } from './lobbyists.service';
+import { LobbyistsService } from './lobbyists.service';
 import { CreateLobbyistDTO, EditLobbyistDTO } from './lobbyists.dto';
 
 @Controller("lobbyists")
 export class LobbyistController {
-	constructor(private readonly lobbyistsService: LobbysistsService) {}
+	constructor(private readonly lobbyistsService: LobbyistsService) {}
 	
 	@Get()
 	public async getLobbyists() {

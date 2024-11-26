@@ -2,7 +2,7 @@ import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { DatabaseModule } from './database/database.module';
-import { LobbysistsService } from './lobbyists/lobbyists.service';
+import { LobbyistsService } from './lobbyists/lobbyists.service';
 import { LobbyistController } from './lobbyists/lobbyists.controller';
 import { ActivitiesRepository } from './activities/activities.repository';
 import { EmailsRepository } from './emails/emails.repository';
@@ -23,7 +23,7 @@ import { UsersController } from './users/users.controller';
 	],
 	providers: [
 		AppService, 
-		LobbysistsService, UsersService,
+		LobbyistsService, UsersService,
 		ActivitiesRepository, EmailsRepository,LobbyistsRepository, SubscriptionsRepository, UsersRepository
 	],
 })
