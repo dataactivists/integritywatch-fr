@@ -13,7 +13,7 @@ export class NotFoundExceptionFilter implements ExceptionFilter {
         const ctx = host.switchToHttp();
         const response = ctx.getResponse<Response>();
         const request = ctx.getRequest<Request>();
-        let url = new URL(
+        const url = new URL(
             `${request.protocol}://${request.get("host")}${request.originalUrl}`,
         );
         log(
