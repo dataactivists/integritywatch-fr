@@ -12,6 +12,8 @@ import { UsersRepository } from "./users/users.repository";
 import { ConfigModule } from "@nestjs/config";
 import { UsersService } from "./users/users.service";
 import { UsersController } from "./users/users.controller";
+import { SubscriptionsService } from "./subscriptions/subscriptions.service";
+import { SubscriptionsController } from "./subscriptions/subscriptions.controller";
 
 @Module({
     imports: [
@@ -21,10 +23,11 @@ import { UsersController } from "./users/users.controller";
             isGlobal: true,
         }),
     ],
-    controllers: [AppController, LobbyistController, UsersController],
+    controllers: [AppController, LobbyistController, SubscriptionsController, UsersController],
     providers: [
         AppService,
         LobbyistsService,
+        SubscriptionsService,
         UsersService,
         ActivitiesRepository,
         EmailsRepository,
