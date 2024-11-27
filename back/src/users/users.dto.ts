@@ -1,7 +1,7 @@
 export class CreateUserDTO {
-  readonly email: string;
+    readonly email: string;
 }
 
 export class EditUserDTO {
-  readonly email: string;
+    readonly email: string;
 }
