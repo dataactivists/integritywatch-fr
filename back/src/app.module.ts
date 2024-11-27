@@ -17,6 +17,7 @@ import { UsersController } from "./users/users.controller";
     imports: [
         DatabaseModule,
         ConfigModule.forRoot({
+            envFilePath: `${process.cwd()}/env/${process.env.NODE_ENV}.env`,
             isGlobal: true,
         }),
     ],
