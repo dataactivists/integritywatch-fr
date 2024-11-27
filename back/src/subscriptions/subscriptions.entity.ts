@@ -13,11 +13,11 @@ export class Subscription {
     @PrimaryGeneratedColumn("increment")
     subscription_id: number;
 
-    @ManyToOne(() => Lobbyist, (lobbyist) => lobbyist.subscriptions)
-    @JoinColumn({ name: "lobbyist_id", referencedColumnName: "lobbyist_id" })
+    @ManyToOne(() => Lobbyist, (lobbyist) => lobbyist.subscriptions, {nullable: false})
+    @JoinColumn({ name: "lobbyist_id", referencedColumnName: "lobbyist_id"})
     lobbyist: Lobbyist;
 
-    @ManyToOne(() => User, (user) => user.subscriptions)
+    @ManyToOne(() => User, (user) => user.subscriptions, {nullable: false})
     @JoinColumn({ name: "user_id", referencedColumnName: "user_id" })
     user: User;
 

@@ -16,11 +16,11 @@ export class Email {
     @Column("datetime")
     sent_at: Date;
 
-    @ManyToOne(() => User, (user) => user.subscriptions)
+    @ManyToOne(() => User, (user) => user.subscriptions, {nullable: false})
     @JoinColumn({ name: "user_id", referencedColumnName: "user_id" })
     user: User;
 
-    @ManyToOne(() => Activity, (activity) => activity.emails)
+    @ManyToOne(() => Activity, (activity) => activity.emails, {nullable: false})
     @JoinColumn({ name: "activity_id", referencedColumnName: "activity_id" })
     activity: User;
 }

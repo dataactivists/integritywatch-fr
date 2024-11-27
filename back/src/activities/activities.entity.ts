@@ -18,7 +18,7 @@ export class Activity {
     @PrimaryGeneratedColumn("increment")
     activity_id: number;
 
-    @ManyToOne(() => Lobbyist, (lobbyist) => lobbyist.activities)
+    @ManyToOne(() => Lobbyist, (lobbyist) => lobbyist.activities, {nullable: false})
     @JoinColumn({ name: "lobbyist_id", referencedColumnName: "lobbyist_id" })
     lobbyist: Lobbyist;
 
